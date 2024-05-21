@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block content %}
+<h2 class="text-white">Agregar Nenes</h2>
+<div class="booking-form-body">
+    <a href="{{ url_for('router.lista_factura') }}" class="btn btn-success">VOLVER</a>       
+    <form id="form" class="custom-form booking-form" action="{{ url_for('router.modificar_personas') }}" method="post" role="form">
+        <div class="booking-form-body">
+            <input type="hidden" name="id" value="{{ data._id }}">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="dni" value="{{ data._dni }}" class="form-control" placeholder="DNI" required pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos numéricos" >
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="apellido" value="{{ data._apellido }}" class="form-control" placeholder="Apellido" required pattern="[A-Za-z ]+" title="El apellido solo puede contener letras y espacios">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="nombre" value="{{ data._nombre }}" class="form-control" placeholder="Nombre" required pattern="[A-Za-z ]+" title="El nombre solo puede contener letras y espacios">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <select name="tipo_ruc" class="form-control" required>
+                        <option value="" selected disabled hidden>Selecciona un tipo de RUC</option>
+                        <option value="RUC educativo" {% if data._tipo_ruc == 'RUC educativo' %} selected {% endif %}>RUC educativo</option>
+                        <option value="RUC profesional" {% if data._tipo_ruc == 'RUC profesional' %} selected {% endif %}>RUC profesional</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="telefono" value="{{ data._telefono }}" class="form-control" placeholder="Teléfono" required pattern="[0-9]+" title="El teléfono solo puede contener dígitos numéricos">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="direccion" value="{{ data._direccion }}" class="form-control" placeholder="Dirección" required>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="monto" value="{{ data._monto }}" class="form-control" placeholder="Monto" required pattern="[0-9]+(\.[0-9]+)?" title="El monto debe ser un número decimal o entero">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="numero_ruc" value="{{ data._numero_ruc }}" class="form-control" placeholder="Número de RUC" required pattern="[0-9]{11}" title="El número de RUC debe tener 11 dígitos numéricos">
+                </div>
+                <div class="col-lg-4 col-md-10 col-8 mx-auto mt-2">
+                    <button id="boton" type="submit" class="form-control btn btn-success">Guardar</button>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
