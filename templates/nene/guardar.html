@@ -1,0 +1,37 @@
+{%extends "template.html"%}
+{%block content%}
+<h2 class="text-white">Agregar nenes</h2>
+<div class="booking-form-body">
+    <a href="/facturas" class="btn btn-success">VOLVER</a>       
+    <form id="form" class="custom-form booking-form"  action="/facturas/guardar" method="post" role="form">
+        <div class="booking-form-body">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="dni" class="form-control" placeholder="DNI" required>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="direccion" class="form-control" placeholder="direccion" required>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="telefono" class="form-control" placeholder="telefono" required>
+                </div>
+                
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="monto" class="form-control" placeholder="monto" required>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="tipo_ruc" class="form-control" placeholder="tipo ruc" required>
+                </div>
+                <div class="col-lg-4 col-md-10 col-8 mx-auto mt-2">
+                    <button id="boton" type="submit" class="form-control btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </form> 
+{% endblock %}                       
