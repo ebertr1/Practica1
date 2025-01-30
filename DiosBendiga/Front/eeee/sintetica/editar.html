@@ -1,0 +1,57 @@
+{%extends "template.html"%}
+{%block content%}
+<h2 class="text-white">Editar Hotel</h2>
+<div class="booking-form-body">
+    <a href="/lista/sinteticas" class="btn btn-success">VOLVER</a>       
+    <form id="form" class="custom-form booking-form"  action="/sintetica/modificar" method="post" role="form">
+        <div class="booking-form-body">
+            <input type="hidden" name="id" value="{{data._id}}"/>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <input type="text" name="nombre" value="{{data._nombre}}" class="form-control" placeholder="Nombre" required>
+                    <input type="direccion" name="text" value="{{data._direccion}}" class="form-control" placeholder="Direccion" required>
+                    <input type="latitud" name="text" value="{{data._latitud}}" class="form-control" placeholder="Latitud" required>
+                    <input type="longitud" name="text" value="{{data._longitud}}" class="form-control" placeholder="Longitud" required>
+                    <input type="text" name="telefono" value="{{data._telefono}}" class="form-control" placeholder="Telefono" required>
+                    <input type="text" name="horario" value="{{data._horario}}" class="form-control" placeholder="Horario" required>
+                </div>
+              
+                <div class="col-lg-6 col-12">
+                    <div id="map" style="height: 180px; "></div>
+                    <div id="star-rating">
+                    </div>
+        
+                <div class="col-lg-4 col-md-10 col-8 mx-auto mt-2">
+                    <button id="boton" type="submit" class="form-control btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </form> 
+    
+    <script>
+        document.querySelectorAll('#star-rating .star').forEach(star => {
+            star.addEventListener('click', function() {
+                let value = this.getAttribute('data-value');
+                let select = document.querySelector('#star-rating select');
+                select.value = value;
+                document.querySelectorAll('#star-rating .star').forEach(innerStar => {
+                    if (innerStar.getAttribute('data-value') <= value) {
+                        innerStar.classList.add('selected');
+                    } else {
+                        innerStar.classList.remove('selected');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        L.marker([51.5, -0.09]).addTo(map)
+        .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+        .openPopup();
+    </script>
+{% endblock %}                       

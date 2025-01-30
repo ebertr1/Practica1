@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="pagetitle text-center">
+    <h1 class="text-black">Editar sintetica </h1> <!-- Cambiado a text-black -->
+  </div>
+  
+  <section class="section">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Ingresa los datos del sintetica </h5>
+
+            <form class="row g-3 needs-validation" method="POST" action="/admin/sintetica/update" novalidate>
+                <input type="hidden" value="{{sintetica.idSintetica }}" name="id" />
+                <div class="mb-3">
+                  <label for="nombre" class="form-label text-white">Nombre del sintetica</label>
+                  <input type="text" class="form-control" name="nombre" required value="{{ sintetica.nombre }}">
+                </div>
+                <div class="mb-3">
+                  <label for="direccion" class="form-label text-white">Inversión sintetica</label>
+                  <input type="text" class="form-control" name="direccion" required value="{{sintetica.direccion }}">
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label text-white">Inversionistas</label>
+                  <input type="number" class="form-control" name="telefono" required value="{{sintetica.telefono }}">
+                </div>
+                <div class="mb-3">
+                  <label for="latitud" class="form-label text-white">Duracion sintetica</label>
+                  <input type="Double" class="form-control" name="latitud" required value="{{ sintetica.latitud }}">
+                </div>
+                <div class="mb-3">
+                  <label for="longitud" class="form-label text-white">Fecha de Inicio</label>
+                  <input type="text" class="form-control" name="longitud" required value="{{ sintetica.longitud}}">
+                </div>
+                <div class="mb-3">
+                  <label for="horario" class="form-label text-white">horario</label>
+                  <input type="text" class="form-control" name="horario" required value="{{ sintetica.horario}}">
+                </div>
+         
+                
+                <a href="/admin/inversionista/list" class="btn btn-custom btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-custom btn-primary">Guardar</button> <!-- Estilo de botón personalizado -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .pagetitle {
+    margin-bottom: 20px;
+  }
+
+  .text-black {
+    color: #000; /* Color negro para el encabezado */
+  }
+
+  .text-white {
+    color: #fff; /* Color blanco para otros textos */
+  }
+
+  .btn-custom {
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-custom.btn-primary {
+    background-color: #007bff; /* Color personalizado para el botón "Guardar" */
+  }
+
+  .btn-custom.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  }
+</style>
+{% endblock %}

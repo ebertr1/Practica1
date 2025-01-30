@@ -1,0 +1,12 @@
+[
+    {"idSintetica": 1, "nombre": "Calva", "direccion": "Calle 1", "telefono": "0989700718", "latitud": -78.467838, "longitud": -0.180653, "horario": "00:00"},
+    {"idSintetica": 2, "nombre": "Solana", "direccion": "Calle 2", "telefono": "0987654321", "latitud": -78.467900, "longitud": -0.180800, "horario": "08:00"},
+    {"idSintetica": 3, "nombre": "Pradera", "direccion": "Avenida Principal", "telefono": "0981234567", "latitud": -78.468000, "longitud": -0.180900, "horario": "09:00"},
+    {"idSintetica": 4, "nombre": "Horizonte", "direccion": "Calle del Sol", "telefono": "0985678901", "latitud": -78.468200, "longitud": -0.181000, "horario": "10:00"},
+    {"idSintetica": 5, "nombre": "Aurora", "direccion": "Camino Real", "telefono": "0983456789", "latitud": -78.468400, "longitud": -0.181100, "horario": "11:00"},
+    {"idSintetica": 6, "nombre": "Renacer", "direccion": "Paseo del Valle", "telefono": "0982345678", "latitud": -78.468600, "longitud": -0.181200, "horario": "12:00"},
+    {"idSintetica": 7, "nombre": "Riviera", "direccion": "Boulevard Norte", "telefono": "0987890123", "latitud": -78.468800, "longitud": -0.181300, "horario": "13:00"},
+    {"idSintetica": 8, "nombre": "Oasis", "direccion": "Jardín del Este", "telefono": "0986789012", "latitud": -78.469000, "longitud": -0.181400, "horario": "14:00"},
+    {"idSintetica": 9, "nombre": "Paraíso", "direccion": "Ruta del Sol", "telefono": "0985678901", "latitud": -78.469200, "longitud": -0.181500, "horario": "15:00"},
+    {"idSintetica": 10, "nombre": "Cumbre", "direccion": "Calle Horizonte", "telefono": "0984567890", "latitud": -78.469400, "longitud": -0.181600, "horario": "16:00"}
+]

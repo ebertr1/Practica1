@@ -1,0 +1,101 @@
+[
+    {
+        "idSintetica": 1,
+        "nombre": "Calva",
+        "direccion": "Calle 1",
+        "telefono": "0989700718",
+        "latitud": -78.467838,
+        "longitud": -0.180653,
+        "horario": "00:00"
+    },
+    {
+        "idSintetica": 2,
+        "nombre": "Solana",
+        "direccion": "Calle 2",
+        "telefono": "0987654321",
+        "latitud": -78.4679,
+        "longitud": -0.1808,
+        "horario": "08:00"
+    },
+    {
+        "idSintetica": 3,
+        "nombre": "Pradera",
+        "direccion": "Avenida Principal",
+        "telefono": "0981234567",
+        "latitud": -78.468,
+        "longitud": -0.1809,
+        "horario": "09:00"
+    },
+    {
+        "idSintetica": 4,
+        "nombre": "Horizonte",
+        "direccion": "Calle del Sol",
+        "telefono": "0985678901",
+        "latitud": -78.4682,
+        "longitud": -0.181,
+        "horario": "10:00"
+    },
+    {
+        "idSintetica": 5,
+        "nombre": "Aurora",
+        "direccion": "Camino Real",
+        "telefono": "0983456789",
+        "latitud": -78.4684,
+        "longitud": -0.1811,
+        "horario": "11:00"
+    },
+    {
+        "idSintetica": 6,
+        "nombre": "Renacer",
+        "direccion": "Paseo del Valle",
+        "telefono": "0982345678",
+        "latitud": -78.4686,
+        "longitud": -0.1812,
+        "horario": "12:00"
+    },
+    {
+        "idSintetica": 7,
+        "nombre": "Riviera",
+        "direccion": "Boulevard Norte",
+        "telefono": "0987890123",
+        "latitud": -78.4688,
+        "longitud": -0.1813,
+        "horario": "13:00"
+    },
+    {
+        "idSintetica": 8,
+        "nombre": "Oasis",
+        "direccion": "Jardín del Este",
+        "telefono": "0986789012",
+        "latitud": -78.469,
+        "longitud": -0.1814,
+        "horario": "14:00"
+    },
+    {
+        "idSintetica": 9,
+        "nombre": "Paraíso",
+        "direccion": "Ruta del Sol",
+        "telefono": "0985678901",
+        "latitud": -78.4692,
+        "longitud": -0.1815,
+        "horario": "15:00"
+    },
+    {
+        "idSintetica": 10,
+        "nombre": "Cumbre",
+        "direccion": "Calle Horizonte",
+        "telefono": "0984567890",
+        "latitud": -78.4694,
+        "longitud": -0.1816,
+        "horario": "16:00"
+    },
+    {
+        "idSintetica": 11,
+        "nombre": "TapiasJRs",
+        "direccion": "Las americas",
+        "telefono": "0953364410",
+        "latitud": -3.865291,
+        "longitud": -78.867463,
+        "horario": "13:00  HORAS - 00 :00 HORAS"
+    }
+]
